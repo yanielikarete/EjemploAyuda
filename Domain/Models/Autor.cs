@@ -9,6 +9,8 @@ namespace EjemploAyuda.Domain.Models
         public int Id { get; set; }
         public string Name1 { get; set; }
         public DateTime Birthday { get; set; }
+
+        
         public virtual List<Tutorial> Tutoriales { get; set; }
         
     }
