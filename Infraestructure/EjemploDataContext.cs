@@ -1,12 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using EjemploAyuda.Models;
 using EjemploAyuda.Infraestructure.EntityConfigurations;
+using EjemploAyuda.Domain.Models;
 
 namespace EjemploAyuda.Infraestructure
 {
     public class EjemploDataContext : DbContext
     {
         public DbSet<Tutorial> Tutoriales { get; set; }
+        public DbSet<Autor> Autores {get; set;}
 
         public EjemploDataContext(DbContextOptions<EjemploDataContext> options) 
             : base(options)
@@ -18,6 +20,7 @@ namespace EjemploAyuda.Infraestructure
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new TutorialEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new AutorEntityConfiguration());
         }
     }
 }

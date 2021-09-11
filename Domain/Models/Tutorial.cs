@@ -1,4 +1,5 @@
 using System;
+using EjemploAyuda.Domain.Models;
 
 namespace EjemploAyuda.Models
 {
@@ -9,5 +10,6 @@ namespace EjemploAyuda.Models
         public string Description { get; set; }
         public bool Published { get; set; }
         public DateTime ApprovedDate { get; set; }
+        public Autor Autor { get; set; }
     }
 }
